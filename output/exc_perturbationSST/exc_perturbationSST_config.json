@@ -1,0 +1,62 @@
+{
+  "target_simulator": "NEST",
+  "run": {
+    "tstart": 0.0,
+    "tstop": 3000.0,
+    "dt": 0.01
+  },
+  "inputs": {
+    "LGN_spikes": {
+      "input_type": "spikes",
+      "module": "h5",
+      "input_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/lgn_spikes.h5",
+      "node_set": "LGN"
+    },
+    "exc_perturbation": {
+      "input_type": "current_clamp",
+      "module": "IClamp",
+      "node_set": {
+        "population": "V1",
+        "pop_name": "SST"
+      },
+      "amp": 230.0,
+      "delay": 1.0,
+      "duration": 3000.0
+    }
+  },
+  "output": {
+    "log_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/output/exc_perturbationSST/log.txt",
+    "output_dir": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/output/exc_perturbationSST",
+    "spikes_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/output/exc_perturbationSST/spikes.h5",
+    "quiet_simulator": true
+  },
+  "components": {
+    "synaptic_models_dir": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/components/synaptic_models",
+    "point_neuron_models_dir": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/components/point_neuron_models"
+  },
+  "networks": {
+    "nodes": [
+      {
+        "node_types_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/LGN_node_types.csv",
+        "nodes_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/LGN_nodes.h5"
+      },
+      {
+        "node_types_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/V1_node_types.csv",
+        "nodes_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/V1_nodes.h5"
+      }
+    ],
+    "edges": [
+      {
+        "edge_types_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/V1_V1_edge_types.csv",
+        "edges_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/V1_V1_edges.h5"
+      },
+      {
+        "edge_types_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/LGN_V1_edge_types.csv",
+        "edges_file": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/network/LGN_V1_edges.h5"
+      }
+    ],
+    "gap_juncs": []
+  },
+  "config_path": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework/exc_perturbationSST_config.json",
+  "config_dir": "/Users/mekhlakapoor/Desktop/Allen/bmtk/Homework/Homework"
+}

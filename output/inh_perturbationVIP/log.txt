@@ -1,0 +1,7 @@
+2022-02-11 11:09:01,180 [INFO] Created log file
+2022-02-11 11:09:01,192 [INFO] Batch processing nodes for LGN/0.
+2022-02-11 11:09:01,239 [INFO] Batch processing nodes for V1/0.
+2022-02-11 11:09:01,804 [INFO] Setting up output directory
+2022-02-11 11:09:01,805 [INFO] Building cells.
+2022-02-11 11:09:01,944 [INFO] Building recurrent connections
+2022-02-11 11:09:11,543 [INFO] Build virtual cell stimulations for LGN_spikes
